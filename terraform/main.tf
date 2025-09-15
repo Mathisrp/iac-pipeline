@@ -13,7 +13,9 @@ provider "aws" {
 variable "ami_id" {
   description = "AMI utilisée pour créer l'instance"
   type        = string
+  default     = "ami-initial"
 }
+
 
 resource "aws_instance" "demo" {
   ami           = var.ami_id
